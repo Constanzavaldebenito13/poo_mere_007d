@@ -54,10 +54,10 @@ public abstract class AbstractMenu {
                 System.out.println("Recibido '"+menuSelect+"'");
                 menuSelect = menu.procesarSeleccion(menuSelect);
             }catch (InputMismatchException exception){
-                menuSelect = Main.invalidSelectOption();
+                menuSelect = AbstractMenu.invalidSelectOption();
             }catch (NoSuchElementException exception){
                 System.out.println(exception.getMessage());
-                menuSelect = Main.invalidSelectOption();
+                menuSelect = AbstractMenu.invalidSelectOption();
             }
 
         }while (menuSelect!=0);
