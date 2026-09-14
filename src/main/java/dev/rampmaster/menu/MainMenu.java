@@ -38,7 +38,7 @@ public class MainMenu extends AbstractMenu{
                 this.bucleMenuInterno(menu4);
                 break;
             default:
-                return this.invalidSelectOption();
+                return AbstractMenu.invalidSelectOption();
         }
         return seleccion;
     }

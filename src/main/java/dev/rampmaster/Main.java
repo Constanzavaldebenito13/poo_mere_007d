@@ -26,18 +26,13 @@ public class Main {
                 menuSelect = sc.nextInt();
                 menuSelect = menu.procesarSeleccion(menuSelect);
             }catch (InputMismatchException exception){
-                menuSelect = Main.invalidSelectOption();
+                menuSelect = AbstractMenu.invalidSelectOption();
             }catch (NoSuchElementException exception){
                 System.out.println(exception.getMessage());
-                menuSelect = Main.invalidSelectOption();
+                menuSelect = AbstractMenu.invalidSelectOption();
             }
 
         }while (menuSelect!=0);
 
-    }
-
-    public static int invalidSelectOption(){
-        System.out.println("Ingrese un valor valido");
-        return -1;
     }
 }

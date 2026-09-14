@@ -4,10 +4,10 @@ public class AsignaturaMenu extends AbstractMenu {
     public AsignaturaMenu(){
         super("Menu de Asignaturas");
         this.agregarOpcion(0,"Volver");
-        this.agregarOpcion(1,"Gestión de Asignaturas");
-        this.agregarOpcion(2,"Gestión de Sedes");
-        this.agregarOpcion(3,"Gestión de Colaboradores");
-        this.agregarOpcion(4,"Gestión de Estudiantes");
+        this.agregarOpcion(1,"Listar Asignaturas");
+        this.agregarOpcion(2,"Crear Asignatura");
+        this.agregarOpcion(3,"Actualizar Asignatura");
+        this.agregarOpcion(4,"Borrar Asignatura");
     }
 
     @Override
@@ -33,7 +33,7 @@ public class AsignaturaMenu extends AbstractMenu {
                 // Borrar Asignatura
                 break;
             default:
-                return this.invalidSelectOption();
+                return AbstractMenu.invalidSelectOption();
         }
         return seleccion;
     }
